@@ -1,1 +1,11 @@
-{}
+{
+  "name": "job-application-tracker",
+  "version": "1.0.0",
+  "description": "A full-stack web app for tracking your job applications. Log jobs, update statuses, add notes, and manage your profile — all in one place.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: No test needed\" && exit 1"
+  },
+  "keywords": [],
+  "type": "commonjs"
+}
