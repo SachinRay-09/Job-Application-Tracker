@@ -63,8 +63,8 @@ export default function AuthPage() {
 
     setLoading(true);
     const url = isLogin
-      ? "http://localhost:8000/jobapptracker/login"
-      : "http://localhost:8000/jobapptracker/register";
+      ? `${import.meta.env.VITE_BACKEND_URL}/login`
+      : `${import.meta.env.VITE_BACKEND_URL}/register`;
 
     try {
       const res = await fetch(url, {

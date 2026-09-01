@@ -67,8 +67,8 @@ export function AppForm({
 
     setLoading(true);
     const url = updating
-      ? "http://localhost:8000/jobapptracker/api/user/updateApplication"
-      : "http://localhost:8000/jobapptracker/api/user/addData";
+      ? `${import.meta.env.VITE_BACKEND_URL}/api/user/updateApplication`
+      : `${import.meta.env.VITE_BACKEND_URL}/api/user/addData`;
 
     try {
       const res = await fetch(url, {

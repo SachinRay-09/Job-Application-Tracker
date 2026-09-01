@@ -73,7 +73,7 @@ export default function ProfilePage() {
   const getUserData = async () => {
     try {
       const res = await fetch(
-        "http://localhost:8000/jobapptracker/api/user/data",
+        `${import.meta.env.VITE_BACKEND_URL}/api/user/data`,
         {
           method: "GET",
           credentials: "include",
@@ -107,7 +107,7 @@ export default function ProfilePage() {
     setLoading(true);
     try {
       const res = await fetch(
-        "http://localhost:8000/jobapptracker/api/user/updateData",
+        `${import.meta.env.VITE_BACKEND_URL}/api/user/updateData`,
         {
           method: "POST",
           credentials: "include",

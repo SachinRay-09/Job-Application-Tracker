@@ -30,7 +30,7 @@ export const Homepage = ({ setUpdateForm, setUpdating, setUpdateId }) => {
     try {
       setLoading(true);
       const res = await fetch(
-        "http://localhost:8000/jobapptracker/api/user/specificapplicationData",
+        `${import.meta.env.VITE_BACKEND_URL}/api/user/specificapplicationData`,
         {
           method: "POST",
           credentials: "include",
@@ -77,7 +77,7 @@ export const Homepage = ({ setUpdateForm, setUpdating, setUpdateId }) => {
   const deleteApplication = async (id) => {
     try {
       const res = await fetch(
-        "http://localhost:8000/jobapptracker/api/user/deleteApplication",
+        `${import.meta.env.VITE_BACKEND_URL}/api/user/deleteApplication`,
         {
           method: "POST",
           credentials: "include",
@@ -119,7 +119,7 @@ export const Homepage = ({ setUpdateForm, setUpdating, setUpdateId }) => {
   async function fetchData() {
     try {
       const res = await fetch(
-        "http://localhost:8000/jobapptracker/api/user/allApplicationData",
+        `${import.meta.env.VITE_BACKEND_URL}/api/user/allApplicationData`,
         {
           method: "GET",
           credentials: "include",
@@ -142,7 +142,7 @@ export const Homepage = ({ setUpdateForm, setUpdating, setUpdateId }) => {
     <div className="min-h-screen bg-slate-50 text-slate-900">
       <Navigation activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      <main className="mx-auto min-h-screen px-6 py-8 sm:ml-80 sm:px-10 lg:px-14">
+      <main className="mx-auto min-h-screen px-6 pt-20 pb-8 sm:pt-8 sm:ml-80 sm:px-10 lg:px-14">
         <div className="space-y-8">
           <section className="rounded-[32px] border border-slate-200/80 bg-white/90 p-8 shadow-sm shadow-slate-900/5">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">

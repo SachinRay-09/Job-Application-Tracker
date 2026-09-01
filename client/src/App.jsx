@@ -1,4 +1,3 @@
-import "./App.css";
 import AuthPage from "./pages/authPage.jsx";
 import { Homepage } from "./pages/homePage.jsx";
 import { AppForm } from "./components/applicationForm.jsx";
